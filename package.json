@@ -1,0 +1,26 @@
+{
+  "name": "ts-gql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev ./src",
+    "build": "tsc && copyfiles -u 1 src/**/*.graphql dist"
+  },
+  "keywords": [],
+  "author": "Sarath TK <sarath.tk@icloud.com> (https://saratonite.github.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/load-files": "^6.5.3",
+    "apollo-server": "^3.5.0",
+    "graphql": "^16.2.0",
+    "graphql-modules": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/copyfiles": "^2.4.1",
+    "@types/node": "^17.0.2",
+    "copyfiles": "^2.4.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  }
+}
