@@ -1,0 +1,16 @@
+overwrite: true
+schema: "./src/modules/**/*.graphql"
+documents: null
+generates:
+  src/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
+    config:
+      conextType: "../types/context-type.ts#IContext"
+      mapperTypeSuffix: Model
+      mappers:
+        User: "@prisma/client/index.d#User"

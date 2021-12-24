@@ -1,21 +1,23 @@
-// import 'graphql-import-node';
-import { createApplication } from 'graphql-modules'
-import { BaseModule } from './modules/Base'
 import { ApolloServer } from 'apollo-server'
+import { ApolloSchema } from './schema'
+import { Logger } from './lib/Logger'
 
-const application = createApplication({
-    modules: [BaseModule]
-})
 
 
 const server = new ApolloServer({
-    schema: application.createSchemaForApollo(),
+    schema: ApolloSchema,
+    context: () => {
+        return {
+            logger: Logger
+        }
+    }
 
 })
 
 
-server.listen().then(({ url }) => {
+server.listen().then(({ url, port }) => {
 
-
-    console.log(`Apollo server running on ${url}`)
+    console.log(`Server listrning on port ${port}`)
+    console.log(url)
 })
+

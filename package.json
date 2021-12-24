@@ -5,22 +5,32 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev ./src",
-    "build": "tsc && copyfiles -u 1 src/**/*.graphql dist"
+    "build": "tsc && copyfiles -u 1 src/**/*.graphql dist",
+    "start": "node ./dist",
+    "gen": "graphql-codegen --config codegen.yml"
   },
   "keywords": [],
   "author": "Sarath TK <sarath.tk@icloud.com> (https://saratonite.github.io/)",
   "license": "ISC",
   "dependencies": {
     "@graphql-tools/load-files": "^6.5.3",
+    "@prisma/client": "3.7.0",
     "apollo-server": "^3.5.0",
     "graphql": "^16.2.0",
-    "graphql-modules": "^2.0.0"
+    "graphql-modules": "^2.0.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.3.0",
     "@types/copyfiles": "^2.4.1",
     "@types/node": "^17.0.2",
     "copyfiles": "^2.4.1",
+    "prisma": "^3.7.0",
+    "ts-node": "^10.4.0",
     "ts-node-dev": "^1.1.8",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "@graphql-codegen/typescript": "2.4.1",
+    "@graphql-codegen/typescript-resolvers": "2.4.2",
+    "@graphql-codegen/introspection": "2.1.0"
   }
 }
