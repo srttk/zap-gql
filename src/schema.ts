@@ -1,10 +1,17 @@
-import { createApplication } from 'graphql-modules'
-import { UserModule } from './modules/User'
-const application = createApplication({
-    modules: [UserModule]
-})
+import { mergeResolvers, mergeTypeDefs } from "@graphql-tools/merge";
 
+const resolver = {
+  Query: {
+    hello: () => `Hello`,
+  },
+};
 
-export const ApolloSchema = application.createSchemaForApollo()
+const typed = `
+type Query {
+    hello: String
+  }
+`;
 
-export default application.schema
+export const typeDefs = mergeTypeDefs([typed]);
+
+export const resolvers = mergeResolvers([resolver]);
