@@ -6,3 +6,4 @@
 
 - [ ] Modules using graphql-modules
 - [ ] Middlewares
+- [ ] Logs

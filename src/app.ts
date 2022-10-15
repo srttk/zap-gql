@@ -6,6 +6,8 @@ export async function createApp() {
     logger: true,
   });
 
+  // Register fastify Plugins and setup
+
   // GraphQL Server
   const graphQLServer = createServer<{
     req: FastifyRequest;
@@ -27,11 +29,22 @@ export async function createApp() {
       `,
       resolvers: {
         Query: {
-          hello: () => "Hello from Yoga!",
+          hello: (_, __, context) => {
+            return "Hello from Yoga!";
+          },
         },
       },
     },
+
+    context: ({ req, reply }) => {
+      return {
+        req,
+        reply,
+      };
+    },
   });
+
+  // Fastify Routes
 
   // register Graphql Route
   /**
