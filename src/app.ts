@@ -1,5 +1,7 @@
 import Fastify, { FastifyRequest, FastifyReply } from "fastify";
 import { createServer } from "@graphql-yoga/node";
+import { useGraphQLModules } from "@envelop/graphql-modules";
+import { application } from "./schema";
 
 export async function createApp() {
   const app = Fastify({
@@ -21,20 +23,8 @@ export async function createApp() {
       error: (...args) => args.forEach((arg) => app.log.error(arg)),
     },
     // Schema
-    schema: {
-      typeDefs: /* GraphQL */ `
-        type Query {
-          hello: String
-        }
-      `,
-      resolvers: {
-        Query: {
-          hello: (_, __, context) => {
-            return "Hello from Yoga!";
-          },
-        },
-      },
-    },
+
+    plugins: [useGraphQLModules(application)],
 
     context: ({ req, reply }) => {
       return {

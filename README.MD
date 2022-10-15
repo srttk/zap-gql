@@ -4,6 +4,6 @@
 
 ## Features
 
-- [ ] Modules using graphql-modules
-- [ ] Middlewares
+- [x] Modules using graphql-modules
+- [ ] GraphQL Middlewares
 - [ ] Logs
