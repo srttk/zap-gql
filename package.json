@@ -6,12 +6,16 @@
     "prepare": "ts-patch install -s",
     "dev": "ts-node-dev --respawn --transpile-only --exit-child ./src/index.ts",
     "build": "copyfiles -u 1 src/**/*.graphql dist && tsc",
-    "start": "node ./dist"
+    "start": "node ./dist",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "keywords": [],
   "author": "Sarath TK <sarath.tk@icloud.com> (https://saratonite.github.io/)",
   "license": "ISC",
   "devDependencies": {
+    "@graphql-codegen/cli": "2.13.7",
+    "@graphql-codegen/typescript": "2.7.4",
+    "@graphql-codegen/typescript-resolvers": "2.7.4",
     "@types/node": "^18.8.5",
     "copyfiles": "^2.4.1",
     "ts-node-dev": "^2.0.0",
@@ -21,6 +25,7 @@
   },
   "dependencies": {
     "@envelop/graphql-modules": "^4.0.1",
+    "@graphql-codegen/cli": "^2.13.7",
     "@graphql-tools/load-files": "^6.6.1",
     "@graphql-yoga/node": "^2.13.13",
     "fastify": "^4.8.1",

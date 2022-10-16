@@ -1,3 +1,13 @@
 type Query {
-  hello: String
+  users: [User]
+  user(email: String): User
+}
+type Mutation {
+  add_user(name: String, email: String): User
+}
+
+type User {
+  name: String
+  email: String
+  password: String
 }

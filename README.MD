@@ -8,3 +8,4 @@
 - [x] Modules using graphql-modules
 - [ ] GraphQL Middlewares
 - [ ] Logs
+- [ ] Graphql Subscription
