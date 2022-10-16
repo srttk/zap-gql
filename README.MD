@@ -4,6 +4,7 @@
 
 ## Features
 
+- [ ] Typescript Codegen
 - [x] Modules using graphql-modules
 - [ ] GraphQL Middlewares
 - [ ] Logs

@@ -1,6 +1,6 @@
 import { makeModule } from "~/utils/graphql";
 
-export const UserModule = makeModule({
-  id: "user-module",
+export const TestModule = makeModule({
+  id: "test-module",
   dirname: __dirname,
 });

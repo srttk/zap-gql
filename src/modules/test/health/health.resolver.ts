@@ -1,5 +1,5 @@
 export default {
   Query: {
-    hello: () => "Hello World!",
+    healthcheck: () => `OK`,
   },
 };
