@@ -25,6 +25,7 @@ export function createGraphQLServer(app: FastifyInstance) {
       return {
         req,
         reply,
+        app,
       };
     },
   });
@@ -35,4 +36,5 @@ export function createGraphQLServer(app: FastifyInstance) {
 export interface IContext {
   req: FastifyRequest;
   reply: FastifyReply;
+  app: FastifyInstance;
 }

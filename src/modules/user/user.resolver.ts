@@ -1,12 +1,5 @@
 import { Resolvers } from "~/generated/graphql";
-
-const users = [
-  {
-    name: "Sarath",
-    email: "sarath@test.com",
-    password: "1234",
-  },
-];
+import { users, createUser, findUser } from "./user.model";
 
 const UserResolvers: Resolvers = {
   Query: {
@@ -15,17 +8,15 @@ const UserResolvers: Resolvers = {
     },
 
     user(_, { email }) {
-      const match = users.find((u) => u.email === email);
-      return match;
+      return findUser(email);
     },
   },
   // Mutations
 
   Mutation: {
     add_user(_, { name, email }) {
-      const newUser = { name, email, password: "1234" };
-      users.push(newUser);
-      return newUser;
+      const u = createUser({ name, email });
+      return u;
     },
   },
 };

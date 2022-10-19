@@ -1,8 +1,10 @@
 import Fastify, { FastifyRequest, FastifyReply } from "fastify";
+import FastifyEnv from "@fastify/env";
 import { createServer } from "@graphql-yoga/node";
 import { useGraphQLModules } from "@envelop/graphql-modules";
 import { application } from "./schema";
 import { createGraphQLServer } from "./graphql.server";
+import { envOptions } from "~/config/env";
 
 export async function createApp() {
   const app = Fastify({
@@ -10,6 +12,8 @@ export async function createApp() {
   });
 
   // Register fastify Plugins and setup
+
+  app.register(FastifyEnv, envOptions);
 
   // Fastify Routes
 

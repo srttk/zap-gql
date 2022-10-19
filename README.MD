@@ -6,9 +6,11 @@
 
 - [x] Typescript Codegen
 - [x] Modules using graphql-modules
+- [x] .env support
 - [ ] GraphQL Middlewares
 - [ ] Logs
 - [ ] Graphql Subscription
+- [ ] Testing
 
 ## Developemt
 

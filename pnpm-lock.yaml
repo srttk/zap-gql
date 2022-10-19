@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@envelop/graphql-modules': ^4.0.1
+  '@fastify/env': ^4.1.0
   '@graphql-codegen/cli': ^2.13.7
   '@graphql-codegen/typescript': 2.7.4
   '@graphql-codegen/typescript-resolvers': 2.7.4
@@ -19,6 +20,7 @@ specifiers:
 
 dependencies:
   '@envelop/graphql-modules': 4.0.1_c73e0adcb9aa849cf854bea8e5eeef51
+  '@fastify/env': 4.1.0
   '@graphql-codegen/cli': 2.13.7_84e430444917af5cc28016e04f857b2e
   '@graphql-tools/load-files': 6.6.1_graphql@16.6.0
   '@graphql-yoga/node': 2.13.13_graphql@16.6.0
@@ -695,6 +697,13 @@ packages:
 
   /@fastify/deepmerge/1.1.0:
     resolution: {integrity: sha512-E8Hfdvs1bG6u0N4vN5Nty6JONUfTdOciyD5rn8KnEsLKIenvOVcr210BQR9t34PRkNyjqnMLGk3e0BsaxRdL+g==}
+    dev: false
+
+  /@fastify/env/4.1.0:
+    resolution: {integrity: sha512-9l+JTUiFWSwb9dGSeR46aDWBjrAg8lJeqMjbotG5/8Ho90+qzRbt8kdSnVhLm5k6HcqXcBaBAT/6cImRhRq0VQ==}
+    dependencies:
+      env-schema: 5.1.0
+      fastify-plugin: 4.3.0
     dev: false
 
   /@fastify/error/3.0.0:
@@ -2064,6 +2073,11 @@ packages:
       no-case: 3.0.4
       tslib: 2.4.0
 
+  /dotenv-expand/9.0.0:
+    resolution: {integrity: sha512-uW8Hrhp5ammm9x7kBLR6jDfujgaDarNA02tprvZdyrJ7MpdzD1KyrIHG4l+YoC2fJ2UcdFdNWNWIjt+sexBHJw==}
+    engines: {node: '>=12'}
+    dev: false
+
   /dotenv/16.0.3:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
@@ -2092,6 +2106,14 @@ packages:
 
   /emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
+
+  /env-schema/5.1.0:
+    resolution: {integrity: sha512-hbu+aC1nddO+tPPgw/guQRNY5CzkgplFu1WbmdiQimy4lcwPCteuKFvxF9uHSU/HkXNlIWR+WC0B53VG21aOxQ==}
+    dependencies:
+      ajv: 8.11.0
+      dotenv: 16.0.3
+      dotenv-expand: 9.0.0
+    dev: false
 
   /error-ex/1.3.2:
     resolution: {integrity: sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==}
@@ -2183,6 +2205,10 @@ packages:
 
   /fast-uri/2.1.0:
     resolution: {integrity: sha512-qKRta6N7BWEFVlyonVY/V+BMLgFqktCUV0QjT259ekAIlbVrMaFnFLxJ4s/JPl4tou56S1BzPufI60bLe29fHA==}
+    dev: false
+
+  /fastify-plugin/4.3.0:
+    resolution: {integrity: sha512-M3+i368lV0OYTJ5TfClIoPKEKSOF7112iiPdwgfSR0gN98BjA1Nk+c6oBHtfcVt9KiMxl+EQKHC1QNWo3ZOpYQ==}
     dev: false
 
   /fastify/4.8.1:

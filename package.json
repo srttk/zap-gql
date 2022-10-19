@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@envelop/graphql-modules": "^4.0.1",
+    "@fastify/env": "^4.1.0",
     "@graphql-codegen/cli": "^2.13.7",
     "@graphql-tools/load-files": "^6.6.1",
     "@graphql-yoga/node": "^2.13.13",
