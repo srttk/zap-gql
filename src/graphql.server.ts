@@ -10,6 +10,7 @@ export function createGraphQLServer(app: FastifyInstance) {
     req: FastifyRequest;
     reply: FastifyReply;
   }>({
+    maskedErrors: false,
     // Integrate Fastify logger
     logging: {
       debug: (...args) => args.forEach((arg) => app.log.debug(arg)),

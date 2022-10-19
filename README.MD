@@ -2,14 +2,16 @@
 
 | A Fastify 🚀 + GraphQL Yoga 🧘‍♀️ Server
 
-## Features
+## :zap: Features
 
 - [x] Typescript Codegen
 - [x] Modules using graphql-modules
 - [x] .env support
+- [ ] Graphql Subscription
+- [ ] File Upload
 - [ ] GraphQL Middlewares
 - [ ] Logs
-- [ ] Graphql Subscription
+- [ ] Rate Limiter
 - [ ] Testing
 
 ## Developemt

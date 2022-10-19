@@ -3,11 +3,10 @@ import { loadFilesSync } from "@graphql-tools/load-files";
 import { join } from "node:path";
 
 type ModuleOptions = {
-  id: string;
   dirname: string;
 };
 
-export function makeModule({ id, dirname }: ModuleOptions) {
+export function makeModule(id: string, { dirname }: ModuleOptions) {
   return createModule({
     id,
     dirname,

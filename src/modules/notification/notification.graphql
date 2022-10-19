@@ -1,0 +1,7 @@
+type Subscription {
+  notifications: String
+}
+
+type Mutation {
+  notify(message: String): String
+}

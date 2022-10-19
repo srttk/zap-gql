@@ -17,12 +17,18 @@ export type Scalars = {
 export type Mutation = {
   __typename?: 'Mutation';
   add_user?: Maybe<User>;
+  notify?: Maybe<Scalars['String']>;
 };
 
 
 export type MutationAdd_UserArgs = {
   email?: InputMaybe<Scalars['String']>;
   name?: InputMaybe<Scalars['String']>;
+};
+
+
+export type MutationNotifyArgs = {
+  message?: InputMaybe<Scalars['String']>;
 };
 
 export type Query = {
@@ -35,6 +41,11 @@ export type Query = {
 
 export type QueryUserArgs = {
   email?: InputMaybe<Scalars['String']>;
+};
+
+export type Subscription = {
+  __typename?: 'Subscription';
+  notifications?: Maybe<Scalars['String']>;
 };
 
 export type User = {
@@ -117,6 +128,7 @@ export type ResolversTypes = {
   Mutation: ResolverTypeWrapper<{}>;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars['String']>;
+  Subscription: ResolverTypeWrapper<{}>;
   User: ResolverTypeWrapper<User>;
 };
 
@@ -126,17 +138,23 @@ export type ResolversParentTypes = {
   Mutation: {};
   Query: {};
   String: Scalars['String'];
+  Subscription: {};
   User: User;
 };
 
 export type MutationResolvers<ContextType = IContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
   add_user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, Partial<MutationAdd_UserArgs>>;
+  notify?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType, Partial<MutationNotifyArgs>>;
 };
 
 export type QueryResolvers<ContextType = IContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   healthcheck?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   user?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType, Partial<QueryUserArgs>>;
   users?: Resolver<Maybe<Array<Maybe<ResolversTypes['User']>>>, ParentType, ContextType>;
+};
+
+export type SubscriptionResolvers<ContextType = IContext, ParentType extends ResolversParentTypes['Subscription'] = ResolversParentTypes['Subscription']> = {
+  notifications?: SubscriptionResolver<Maybe<ResolversTypes['String']>, "notifications", ParentType, ContextType>;
 };
 
 export type UserResolvers<ContextType = IContext, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
@@ -149,6 +167,7 @@ export type UserResolvers<ContextType = IContext, ParentType extends ResolversPa
 export type Resolvers<ContextType = IContext> = {
   Mutation?: MutationResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
+  Subscription?: SubscriptionResolvers<ContextType>;
   User?: UserResolvers<ContextType>;
 };
 
