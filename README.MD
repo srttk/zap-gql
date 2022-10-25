@@ -1,4 +1,4 @@
-# Fasty-gql [WIP]
+# :zap: Fasty-gql [WIP]
 
 | A Fastify 🚀 + GraphQL Yoga 🧘‍♀️ Server
 
@@ -7,7 +7,7 @@
 - [x] Typescript Codegen
 - [x] Modules using graphql-modules
 - [x] .env support
-- [ ] Graphql Subscription
+- [x] Graphql Subscription
 - [ ] File Upload
 - [ ] GraphQL Middlewares
 - [ ] Logs
